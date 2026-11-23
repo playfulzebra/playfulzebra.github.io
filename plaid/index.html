@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>PFM – Returning from your bank</title>
+  <style>
+    body { margin:0; font:17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+           background:#f6f8f7; color:#12302d; }
+    main { max-width:520px; margin:0 auto; padding:64px 20px; text-align:center; }
+    a { color:#0f766e; }
+    @media (prefers-color-scheme: dark) { body { background:#0d1716; color:#e6efed; } a { color:#2dd4bf; } }
+  </style>
+</head>
+<body>
+<main>
+  <p>Returning to PFM…</p>
+  <p><a id="go" href="http://localhost:8000/connect">Continue</a></p>
+</main>
+<script>
+  // After you sign in at your bank, Plaid sends you here. PFM's helper runs on your own Mac,
+  // so pass Plaid's sign-in reference straight back to it. Nothing is stored or sent anywhere else.
+  var target = "http://localhost:8000/connect" + location.search;
+  document.getElementById("go").href = target;
+  location.replace(target);
+</script>
+</body>
+</html>
