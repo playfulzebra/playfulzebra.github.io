@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PFM – Personal Finance Manager</title>
+  <meta name="description" content="PFM is a private household finance app for two people. It is not available to the public.">
+  <link rel="icon" type="image/png" href="pfm-icon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #f6f8f7;
+      --card: #ffffff;
+      --text: #12302d;
+      --muted: #5b6b6a;
+      --accent: #0f766e;
+      --line: #e2e8e6;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1716;
+        --card: #13211f;
+        --text: #e6efed;
+        --muted: #9fb1ae;
+        --accent: #2dd4bf;
+        --line: #22332f;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    main { max-width: 680px; margin: 0 auto; padding: 56px 20px 72px; }
+    header { display: flex; align-items: center; gap: 20px; margin-bottom: 28px; }
+    header img { width: 88px; height: 88px; border-radius: 20px; flex: none; }
+    h1 { font-size: 34px; line-height: 1.15; margin: 0; letter-spacing: -0.01em; }
+    .tag { color: var(--muted); margin: 4px 0 0; }
+    .lead { font-size: 19px; margin: 0 0 40px; }
+    section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px 24px 8px;
+    }
+    h2 { font-size: 22px; margin: 0 0 4px; }
+    .updated { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
+    h3 { font-size: 17px; margin: 20px 0 4px; }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 14px; padding-left: 22px; }
+    a { color: var(--accent); }
+    footer { color: var(--muted); font-size: 14px; margin-top: 32px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="pfm-icon.png" alt="PFM logo">
+      <div>
+        <h1>PFM</h1>
+        <p class="tag">Personal Finance Manager</p>
+      </div>
+    </header>
+
+    <p class="lead">PFM is a private household finance app used by two people to see their own bank accounts,
+      spending, debts and investments in one place. It is not available to the public.</p>
+
+    <section id="privacy">
+      <h2>Privacy policy</h2>
+      <p class="updated">Last updated: November 23, 2026</p>
+
+      <h3>What data PFM uses</h3>
+      <p>PFM connects to the users' own financial accounts through <a href="https://plaid.com">Plaid</a>, only
+        after the account holder signs in to their bank and gives consent in Plaid's connection screen. PFM receives
+        account names and balances, transactions, credit card and loan details, and investment holdings.</p>
+
+      <h3>Where it is stored</h3>
+      <p>The data is stored only on the household's own computer. It is not kept on any other server, and the
+        bank sign-in details are never seen or stored by PFM.</p>
+
+      <h3>Sharing</h3>
+      <p>The data is used only to show the account holders their own finances. It is never shared with, sold to,
+        or used for advertising by anyone.</p>
+
+      <h3>Deleting your data</h3>
+      <p>Disconnecting a bank in the app ends PFM's access to that bank through Plaid and removes its saved
+        data. Access can also be revoked at any time through Plaid
+        (<a href="https://my.plaid.com">my.plaid.com</a>) or the bank itself.</p>
+    </section>
+
+    <footer>PFM · private household app</footer>
+  </main>
+</body>
+</html>
